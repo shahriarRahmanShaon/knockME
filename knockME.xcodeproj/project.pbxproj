@@ -99,12 +99,10 @@
 		00854377258911E900736286 /* knockME */ = {
 			isa = PBXGroup;
 			children = (
-				00854378258911E900736286 /* AppDelegate.swift */,
-				0085437A258911E900736286 /* SceneDelegate.swift */,
-				0085437C258911E900736286 /* ViewController.swift */,
-				0085437E258911E900736286 /* Main.storyboard */,
+				008543AB258911F900736286 /* app files */,
+				008543B32589122C00736286 /* Controller */,
+				008543B22589120E00736286 /* View */,
 				00854381258911EB00736286 /* Assets.xcassets */,
-				00854383258911EB00736286 /* LaunchScreen.storyboard */,
 				00854386258911EB00736286 /* Info.plist */,
 			);
 			path = knockME;
@@ -126,6 +124,32 @@
 				0085439C258911EB00736286 /* Info.plist */,
 			);
 			path = knockMEUITests;
+			sourceTree = "<group>";
+		};
+		008543AB258911F900736286 /* app files */ = {
+			isa = PBXGroup;
+			children = (
+				00854378258911E900736286 /* AppDelegate.swift */,
+				0085437A258911E900736286 /* SceneDelegate.swift */,
+			);
+			path = "app files";
+			sourceTree = "<group>";
+		};
+		008543B22589120E00736286 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0085437E258911E900736286 /* Main.storyboard */,
+				00854383258911EB00736286 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		008543B32589122C00736286 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0085437C258911E900736286 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
