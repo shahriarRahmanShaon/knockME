@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		00854385258911EB00736286 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00854383258911EB00736286 /* LaunchScreen.storyboard */; };
 		00854390258911EB00736286 /* knockMETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085438F258911EB00736286 /* knockMETests.swift */; };
 		0085439B258911EB00736286 /* knockMEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085439A258911EB00736286 /* knockMEUITests.swift */; };
+		00ADC72C259BA2DB0096C67B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00ADC72B259BA2DA0096C67B /* GoogleService-Info.plist */; };
+		58A7369BA581DCCF38089B85 /* Pods_knockME.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EA2A5492741AABC47A9814 /* Pods_knockME.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		00854396258911EB00736286 /* knockMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = knockMEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0085439A258911EB00736286 /* knockMEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = knockMEUITests.swift; sourceTree = "<group>"; };
 		0085439C258911EB00736286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00ADC72B259BA2DA0096C67B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52EA2A5492741AABC47A9814 /* Pods_knockME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_knockME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF1987FB677811018B58398 /* Pods-knockME.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-knockME.debug.xcconfig"; path = "Target Support Files/Pods-knockME/Pods-knockME.debug.xcconfig"; sourceTree = "<group>"; };
+		D69353551C1F7A693234BBA3 /* Pods-knockME.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-knockME.release.xcconfig"; path = "Target Support Files/Pods-knockME/Pods-knockME.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58A7369BA581DCCF38089B85 /* Pods_knockME.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +96,8 @@
 				0085438E258911EB00736286 /* knockMETests */,
 				00854399258911EB00736286 /* knockMEUITests */,
 				00854376258911E900736286 /* Products */,
+				E2336F1C763145562F1E3E3C /* Pods */,
+				CC7BE28C1745A0A94DD80445 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +119,7 @@
 				008543B22589120E00736286 /* View */,
 				00854381258911EB00736286 /* Assets.xcassets */,
 				00854386258911EB00736286 /* Info.plist */,
+				00ADC72B259BA2DA0096C67B /* GoogleService-Info.plist */,
 			);
 			path = knockME;
 			sourceTree = "<group>";
@@ -161,6 +171,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		CC7BE28C1745A0A94DD80445 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52EA2A5492741AABC47A9814 /* Pods_knockME.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2336F1C763145562F1E3E3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1987FB677811018B58398 /* Pods-knockME.debug.xcconfig */,
+				D69353551C1F7A693234BBA3 /* Pods-knockME.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0085439F258911EB00736286 /* Build configuration list for PBXNativeTarget "knockME" */;
 			buildPhases = (
+				B1F6F1C51F3EACFB6502E16F /* [CP] Check Pods Manifest.lock */,
 				00854371258911E900736286 /* Sources */,
 				00854372258911E900736286 /* Frameworks */,
 				00854373258911E900736286 /* Resources */,
+				2D67DFB4E77BCCD22F8CE95F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00854385258911EB00736286 /* LaunchScreen.storyboard in Resources */,
+				00ADC72C259BA2DB0096C67B /* GoogleService-Info.plist in Resources */,
 				00854382258911EB00736286 /* Assets.xcassets in Resources */,
 				00854380258911E900736286 /* Main.storyboard in Resources */,
 			);
@@ -285,6 +315,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D67DFB4E77BCCD22F8CE95F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-knockME/Pods-knockME-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-knockME/Pods-knockME-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-knockME/Pods-knockME-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1F6F1C51F3EACFB6502E16F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-knockME-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		00854371258911E900736286 /* Sources */ = {
@@ -469,6 +541,7 @@
 		};
 		008543A0258911EB00736286 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF1987FB677811018B58398 /* Pods-knockME.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +561,7 @@
 		};
 		008543A1258911EB00736286 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D69353551C1F7A693234BBA3 /* Pods-knockME.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
