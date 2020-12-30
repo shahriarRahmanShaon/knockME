@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginView: UIViewController {
 
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +19,16 @@ class LoginView: UIViewController {
     }
     
 
+    @IBAction func loginPressed(_ sender: Any) {
+        if let email = emailField.text , let password = passwordField.text{
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let e = error {
+                print(e.localizedDescription)
+            }else{
+                self.performSegue(withIdentifier: "LoginToChat", sender: self)
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -26,4 +39,5 @@ class LoginView: UIViewController {
     }
     */
 
+}
 }

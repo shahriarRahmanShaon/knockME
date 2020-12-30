@@ -10,6 +10,10 @@
 		00057AC52596C80500DB371F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00057AC42596C80500DB371F /* RegisterView.swift */; };
 		00057ADA2596C8EA00DB371F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00057AD92596C8EA00DB371F /* LoginView.swift */; };
 		00057ADF2596C91600DB371F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00057ADE2596C91600DB371F /* HomeView.swift */; };
+		004C7384259C6F310031D428 /* Constrains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C7383259C6F310031D428 /* Constrains.swift */; };
+		004C738B259C782B0031D428 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C738A259C782B0031D428 /* MessageModel.swift */; };
+		004C7394259CB58B0031D428 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C7392259CB58B0031D428 /* TableViewCell.swift */; };
+		004C7395259CB58B0031D428 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004C7393259CB58B0031D428 /* TableViewCell.xib */; };
 		00854379258911E900736286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00854378258911E900736286 /* AppDelegate.swift */; };
 		0085437B258911E900736286 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085437A258911E900736286 /* SceneDelegate.swift */; };
 		0085437D258911E900736286 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085437C258911E900736286 /* ViewController.swift */; };
@@ -43,6 +47,10 @@
 		00057AC42596C80500DB371F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		00057AD92596C8EA00DB371F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		00057ADE2596C91600DB371F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		004C7383259C6F310031D428 /* Constrains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrains.swift; sourceTree = "<group>"; };
+		004C738A259C782B0031D428 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		004C7392259CB58B0031D428 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		004C7393259CB58B0031D428 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		00854375258911E900736286 /* knockME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = knockME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00854378258911E900736286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0085437A258911E900736286 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		004C7389259C78010031D428 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				004C738A259C782B0031D428 /* MessageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0085436C258911E900736286 = {
 			isa = PBXGroup;
 			children = (
@@ -115,11 +131,13 @@
 			isa = PBXGroup;
 			children = (
 				008543AB258911F900736286 /* app files */,
+				004C7389259C78010031D428 /* Model */,
 				008543B32589122C00736286 /* Controller */,
 				008543B22589120E00736286 /* View */,
 				00854381258911EB00736286 /* Assets.xcassets */,
 				00854386258911EB00736286 /* Info.plist */,
 				00ADC72B259BA2DA0096C67B /* GoogleService-Info.plist */,
+				004C7383259C6F310031D428 /* Constrains.swift */,
 			);
 			path = knockME;
 			sourceTree = "<group>";
@@ -156,6 +174,8 @@
 			children = (
 				0085437E258911E900736286 /* Main.storyboard */,
 				00854383258911EB00736286 /* LaunchScreen.storyboard */,
+				004C7392259CB58B0031D428 /* TableViewCell.swift */,
+				004C7393259CB58B0031D428 /* TableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00854385258911EB00736286 /* LaunchScreen.storyboard in Resources */,
+				004C7395259CB58B0031D428 /* TableViewCell.xib in Resources */,
 				00ADC72C259BA2DB0096C67B /* GoogleService-Info.plist in Resources */,
 				00854382258911EB00736286 /* Assets.xcassets in Resources */,
 				00854380258911E900736286 /* Main.storyboard in Resources */,
@@ -366,8 +387,11 @@
 				0085437D258911E900736286 /* ViewController.swift in Sources */,
 				00057AC52596C80500DB371F /* RegisterView.swift in Sources */,
 				00854379258911E900736286 /* AppDelegate.swift in Sources */,
+				004C7394259CB58B0031D428 /* TableViewCell.swift in Sources */,
+				004C738B259C782B0031D428 /* MessageModel.swift in Sources */,
 				00057ADF2596C91600DB371F /* HomeView.swift in Sources */,
 				00057ADA2596C8EA00DB371F /* LoginView.swift in Sources */,
+				004C7384259C6F310031D428 /* Constrains.swift in Sources */,
 				0085437B258911E900736286 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
