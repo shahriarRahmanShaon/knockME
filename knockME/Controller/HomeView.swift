@@ -27,6 +27,14 @@ class HomeView: UIViewController {
         title = "Knock Me"
         // registering newly created nib file
         tableView.register(UINib(nibName: K.nibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier.reusableCell)
+        //loading chat data whenever one opens up the app
+        loadData()
+    }
+    //MARK:- data send and load
+    
+    func loadData() {
+        message = []
+        
     }
     
     @IBAction func sendButtonPressed(_ sender: Any) {
@@ -44,7 +52,7 @@ class HomeView: UIViewController {
             }
         }
     }
-   
+   //MARK:- logout button work
     @IBAction func logoutPressed(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {
