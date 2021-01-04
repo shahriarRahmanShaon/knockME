@@ -14,8 +14,12 @@ class TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        cellLabel.numberOfLines = 0
+        cellLabel.translatesAutoresizingMaskIntoConstraints = false
+        cellLabel.lineBreakMode = .byWordWrapping
+        
         // Initialization code
-        cellView.layer.cornerRadius = cellView.frame.size.height/5
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

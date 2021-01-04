@@ -8,6 +8,7 @@ target 'knockME' do
   pod 'CLTypingLabel'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift'
 
 
 end

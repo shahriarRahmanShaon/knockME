@@ -8,19 +8,17 @@
 import UIKit
 import Firebase
 
-class HomeView: UIViewController {
-    
+
+class HomeView: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     let db = Firestore.firestore()
-    var message : [Message] = [
-        Message(sender: "shaon", body: "hi"),
-        Message(sender: "shihab", body: "jio"),
-        Message(sender: "kihab", body: "hhhhhhhhhhhhhhhhhhhhhhhhhhhuuuuuuuuuuiiiiiiiii")
-    ]
+    
+    var message : [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        messageTextField.delegate = self
         // accepting datasource dalegete
         tableView.dataSource = self
         navigationItem.hidesBackButton = true
@@ -33,7 +31,29 @@ class HomeView: UIViewController {
     //MARK:- data send and load
     
     func loadData() {
-        message = []
+       
+        let docRef = db.collection(K.FStore.collectionName)
+        docRef.order(by: "time").addSnapshotListener { (snapShot, error) in
+            if let e = error {
+                print(e)
+            }else{
+                if let dataSnapShot = snapShot?.documents{
+                    self.message = []
+                    for doc in dataSnapShot{
+                        let data = doc.data()
+                        if let sender = data["senderName"] as?String, let body = data["message"] as? String {
+                            let newMessage = Message(sender: sender, body: body)
+                            self.message.append(newMessage)
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                            
+                        }
+                    }
+                }
+               
+            }
+        }
         
     }
     
@@ -41,7 +61,8 @@ class HomeView: UIViewController {
         if  let messageBody = messageTextField.text , let messageSender = Auth.auth().currentUser?.email{
             db.collection(K.FStore.collectionName).addDocument(data: [
                 "senderName" : messageSender,
-                "message"    : messageBody
+                "message"    : messageBody,
+                "time"       : Date().timeIntervalSince1970
             ]) { (error) in
                 if let e = error {
                     print("hoynai firestore er kaj \(e)")
@@ -51,6 +72,7 @@ class HomeView: UIViewController {
                
             }
         }
+        messageTextField.text = ""
     }
    //MARK:- logout button work
     @IBAction func logoutPressed(_ sender: Any) {
@@ -77,6 +99,5 @@ extension HomeView : UITableViewDataSource{
         cell.cellLabel?.text = message[indexPath.row].body
         return cell
     }
-    
-    
 }
+

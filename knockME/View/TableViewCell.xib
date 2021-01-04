@@ -23,8 +23,8 @@
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0Y-Q7-mWm">
                                 <rect key="frame" x="10" y="10" width="240" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5D-tC-pyq">
-                                        <rect key="frame" x="10" y="10" width="230" height="70"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ooooooooooooooooooooooooooooooooooooooooooooooooo" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5D-tC-pyq">
+                                        <rect key="frame" x="10" y="10" width="220" height="70"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,10 +32,13 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="f5D-tC-pyq" secondAttribute="trailing" id="2c8-Zh-2fb"/>
+                                    <constraint firstAttribute="bottom" secondItem="f5D-tC-pyq" secondAttribute="bottom" constant="10" id="BaZ-Mk-FiX"/>
                                     <constraint firstAttribute="bottom" secondItem="f5D-tC-pyq" secondAttribute="bottom" constant="10" id="E4F-jQ-R3H"/>
                                     <constraint firstItem="f5D-tC-pyq" firstAttribute="leading" secondItem="V0Y-Q7-mWm" secondAttribute="leading" constant="10" id="Qm1-Gz-Rbk"/>
+                                    <constraint firstAttribute="trailing" secondItem="f5D-tC-pyq" secondAttribute="trailing" constant="10" id="WeO-NA-RvB"/>
+                                    <constraint firstItem="f5D-tC-pyq" firstAttribute="top" secondItem="V0Y-Q7-mWm" secondAttribute="top" constant="10" id="apL-bd-paI"/>
                                     <constraint firstItem="f5D-tC-pyq" firstAttribute="top" secondItem="V0Y-Q7-mWm" secondAttribute="top" constant="10" id="pkb-Eu-Te0"/>
+                                    <constraint firstItem="f5D-tC-pyq" firstAttribute="leading" secondItem="V0Y-Q7-mWm" secondAttribute="leading" constant="10" id="r20-Eg-2pc"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ij0-ee-878">
